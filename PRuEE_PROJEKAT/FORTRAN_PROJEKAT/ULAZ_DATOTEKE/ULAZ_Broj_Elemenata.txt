@@ -1,0 +1,3 @@
+  6   !Broj vodova
+  7   !Broj potrosaca
+  1   !Broj transformatora
