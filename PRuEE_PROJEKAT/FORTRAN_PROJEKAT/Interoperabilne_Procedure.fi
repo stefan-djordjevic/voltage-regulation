@@ -1,0 +1,56 @@
+!DEC$FREEFORM
+
+INTERFACE
+
+    !Relacija za proracun injektiranih struja cvorova
+    SUBROUTINE Proracun_I_inj_Cvora_C (Sp, Y0, Vc, I_in) BIND (C, NAME = "Proracun_I_inj_Cvora")  
+		
+        IMPORT
+
+		COMPLEX(C_FLOAT_COMPLEX), INTENT(IN)   :: Sp
+        COMPLEX(C_FLOAT_COMPLEX), INTENT(IN)   :: Y0
+        COMPLEX(C_FLOAT_COMPLEX), INTENT(IN)   :: Vc
+        COMPLEX(C_FLOAT_COMPLEX), INTENT(OUT)  :: I_in
+
+    END SUBROUTINE Proracun_I_inj_Cvora_C   
+
+
+    !Relacija za proracun struja po granama (zamena unazad - pocevsi od grana u poslednjem lejeru)
+    SUBROUTINE Proracun_J_Grane_C (Jg_sum, Jg) BIND (C, NAME = "Proracun_J_Grane")  
+		
+        IMPORT
+
+		COMPLEX(C_FLOAT_COMPLEX), INTENT(INOUT)   :: Jg_sum
+        COMPLEX(C_FLOAT_COMPLEX), INTENT(IN)      :: Jg
+
+    END SUBROUTINE Proracun_J_Grane_C   
+
+    
+    !Relacija za proracun napona u cvorovima (zamena unapred - pocevsi od cvora u prvom lejeru)
+    SUBROUTINE Proracun_V_Cvora_C (Vc_gornji, Zg, Jg, Vc_donji) BIND (C, NAME = "Proracun_V_Cvora")  
+		
+        IMPORT
+
+		COMPLEX(C_FLOAT_COMPLEX), INTENT(IN)   :: Vc_gornji
+        COMPLEX(C_FLOAT_COMPLEX), INTENT(IN)   :: Zg
+        COMPLEX(C_FLOAT_COMPLEX), INTENT(IN)   :: Jg
+        COMPLEX(C_FLOAT_COMPLEX), INTENT(OUT)  :: Vc_donji
+
+    END SUBROUTINE Proracun_V_Cvora_C
+
+
+    !Relacija za proracun injektirane snage cvorova
+    SUBROUTINE Proracun_S_Cvora_C (Vc, I_in, Y0, U, S) BIND (C, NAME = "Proracun_S_Cvora")  
+		
+        IMPORT
+
+		COMPLEX(C_FLOAT_COMPLEX), INTENT(IN)   :: Vc
+        COMPLEX(C_FLOAT_COMPLEX), INTENT(IN)   :: I_in
+        COMPLEX(C_FLOAT_COMPLEX), INTENT(IN)   :: Y0
+        COMPLEX(C_FLOAT_COMPLEX), INTENT(IN)   :: U
+        COMPLEX(C_FLOAT_COMPLEX), INTENT(OUT)  :: S
+
+    END SUBROUTINE Proracun_S_Cvora_C
+
+
+END INTERFACE
