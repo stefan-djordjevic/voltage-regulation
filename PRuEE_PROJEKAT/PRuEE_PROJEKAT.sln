@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "FORTRAN_PROJEKAT", "FORTRAN_PROJEKAT\FORTRAN_PROJEKAT.vfproj", "{F35E86B9-82AC-44B9-9DE8-45A74C1E53F0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{21FD65AE-4E2D-454A-8769-8E9CFB345193} = {21FD65AE-4E2D-454A-8769-8E9CFB345193}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C++_DLL_PROJEKAT", "C++_DLL_PROJEKAT\C++_DLL_PROJEKAT.vcxproj", "{21FD65AE-4E2D-454A-8769-8E9CFB345193}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F35E86B9-82AC-44B9-9DE8-45A74C1E53F0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F35E86B9-82AC-44B9-9DE8-45A74C1E53F0}.Debug|Win32.Build.0 = Debug|Win32
+		{F35E86B9-82AC-44B9-9DE8-45A74C1E53F0}.Release|Win32.ActiveCfg = Release|Win32
+		{F35E86B9-82AC-44B9-9DE8-45A74C1E53F0}.Release|Win32.Build.0 = Release|Win32
+		{21FD65AE-4E2D-454A-8769-8E9CFB345193}.Debug|Win32.ActiveCfg = Debug|Win32
+		{21FD65AE-4E2D-454A-8769-8E9CFB345193}.Debug|Win32.Build.0 = Debug|Win32
+		{21FD65AE-4E2D-454A-8769-8E9CFB345193}.Release|Win32.ActiveCfg = Release|Win32
+		{21FD65AE-4E2D-454A-8769-8E9CFB345193}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
